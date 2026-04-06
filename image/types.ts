@@ -1,10 +1,13 @@
+import { NewObj } from "@core-shared/express/types";
+
 export interface IGalleryImage {
     id: string;
-    createdAt: Date;
-    updatedAt: Date;
-    // Add additional fields here
+    title: string;
+    url: string;
+    description: string;
+    enabled: boolean;
+    sortOrder: number;
+    postDate: Date;
 }
 
-export interface NewGalleryImage {
-    // Add create fields here
-}
+export type NewGalleryImage = NewObj<IGalleryImage>;
